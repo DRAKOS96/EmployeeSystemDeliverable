@@ -1,0 +1,69 @@
+﻿@viewModel EmployeeSystemDeliverable.ViewModels.DefaultViewModel, EmployeeSystemDeliverable
+@masterPage Views/MasterPage.dotmaster
+<dot:Content ContentPlaceHolderID="MainContent">
+
+    <div class="content">
+
+        <img src="/Resources/Images/tree.svg" class="content__background-image content__background-image--left" />
+
+        <a href="https://www.dotvvm.com/" target="_blank">
+            <img src="/Resources/Images/text.svg" class="content__image" />
+        </a>
+        <div class="content__text">
+            <h1>{{value: Title}}</h1>
+
+        </div>
+
+        <div class="page grid">
+            <dot:GridView DataSource="{value: Employees}" class="page-grid">
+                <Columns>
+                    <dot:GridViewTextColumn ValueBinding="{value: name}" HeaderText="Firstname" />
+                    <dot:GridViewTextColumn ValueBinding="{value: surname}" HeaderText="Lastname" />
+                    <dot:GridViewTextColumn ValueBinding="{value: hired   }" HeaderText="Date" FormatString="d.M.yyyy" />
+                    <dot:GridViewTextColumn ValueBinding="{value: skills}" HeaderText="skills" />
+                    <dot:GridViewTemplateColumn>
+                        <dot:RouteLink Text="Detail" RouteName="Detail" Param-Id="{{value: idemployee}}" />
+                    </dot:GridViewTemplateColumn>
+                    <dot:GridViewTemplateColumn>
+                        <dot:RouteLink Text="Edit" RouteName="Edit" Param-Id="{{value: idemployee}}" />
+                    </dot:GridViewTemplateColumn>
+                    <dot:GridViewTemplateColumn>
+                        <dot:RouteLink Text="Create" RouteName="Create" />
+                    </dot:GridViewTemplateColumn>
+
+                </Columns>
+                <EmptyDataTemplate>
+                    There are no registered employees. First sign in or sign up and add some employees.
+                </EmptyDataTemplate>
+
+            </dot:GridView>
+        </div>
+
+        <div class="page grid skills">
+            <dot:GridView DataSource="{value: Skills}" class="page-grid">
+                <Columns>
+                    <dot:GridViewTextColumn ValueBinding="{value: name}" HeaderText="Skill name" />
+                    <dot:GridViewTextColumn ValueBinding="{value: desc}" HeaderText="Description" />
+                    <dot:GridViewTextColumn ValueBinding="{value: creation }" HeaderText="Date" FormatString="d.M.yyyy" />
+                    
+                    <dot:GridViewTemplateColumn>
+                        <dot:RouteLink Text="Detail" RouteName="Detailskill" Param-Id="{{value: idskills}}" />
+                    </dot:GridViewTemplateColumn>
+                    <dot:GridViewTemplateColumn>
+                        <dot:RouteLink Text="Edit" RouteName="EditSkill" Param-Id="{{value: idskills}}" />
+                    </dot:GridViewTemplateColumn>
+                    <dot:GridViewTemplateColumn>
+                        <dot:RouteLink Text="Create" RouteName="CreateSkill" />
+                    </dot:GridViewTemplateColumn>
+
+                </Columns>
+                <EmptyDataTemplate>
+                    There are no registered employees. First sign in or sign up and add some employees.
+                </EmptyDataTemplate>
+
+            </dot:GridView>
+        </div>
+
+        <img src="/Resources/Images/tree.svg" class="content__background-image content__background-image content__background-image--right" />
+    </div>
+</dot:Content>

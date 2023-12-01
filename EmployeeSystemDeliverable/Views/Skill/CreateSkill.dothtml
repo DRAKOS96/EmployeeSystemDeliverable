@@ -1,0 +1,24 @@
+﻿@viewModel EmployeeSystemDeliverable.ViewModels.Skill.CreateSkillViewModel, EmployeeSystemDeliverable
+@masterPage Views/MasterPage.dotmaster
+
+<dot:Content ContentPlaceHolderID="MainContent">
+    <form>
+        <div>
+            <dot:TextBox Text="{value:Skill.name}" />
+
+        </div>
+
+        <div>
+            <dot:TextBox Text="{value:Skill.desc}" />
+
+        </div>
+        <div>
+            <dot:TextBox Text="{value:Skill.creation}" />
+
+        </div>
+
+        <dot:Button Text="New Skill" Click="{command: NewSkill()}" IsSubmitButton />
+    </form>
+
+</dot:Content>
+

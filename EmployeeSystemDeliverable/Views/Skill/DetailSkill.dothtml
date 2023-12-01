@@ -1,0 +1,30 @@
+﻿@viewModel EmployeeSystemDeliverable.ViewModels.Skill.DetailSkillViewModel, EmployeeSystemDeliverable
+@masterPage Views/MasterPage.dotmaster
+
+<dot:Content ContentPlaceHolderID="MainContent">
+
+
+    <div>
+        <h1> Skill Details  </h1>
+        <div class="input-box">
+
+            <span class="input-text">{{value: Skill.name}}</span>
+        </div>
+
+        <div class="input-box">
+
+            <span class="input-text">{{value: Skill.desc}}</span>
+        </div>
+
+        <div class="input-box">
+
+            <span class="input-text">{{value: Skill.creation}}</span>
+        </div>
+
+        
+
+        <dot:Button Text="Delete" Click="{command: DeleteSkill()}" IsSubmitButton />
+    </div>
+
+</dot:Content>
+

@@ -1,0 +1,26 @@
+﻿@viewModel EmployeeSystemDeliverable.ViewModels.Employee.CreateViewModel, EmployeeSystemDeliverable
+@masterPage Views/MasterPage.dotmaster
+
+<dot:Content ContentPlaceHolderID="MainContent">
+
+    <form>
+        <div>
+            <dot:TextBox Text= "{value:Employee.name}" />
+
+        </div>
+
+        <div>
+            <dot:TextBox Text="{value: Employee.surname}" />
+
+        </div>
+      
+        <div>
+            <dot:TextBox Text="{value: Employee.skills}" />
+
+        </div>
+
+        <dot:Button Text="New Employee" Click="{command: NewEmployee()}" IsSubmitButton />
+    </form>
+
+</dot:Content>
+

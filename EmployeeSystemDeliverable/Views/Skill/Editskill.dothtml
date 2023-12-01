@@ -1,0 +1,26 @@
+﻿@viewModel EmployeeSystemDeliverable.ViewModels.Skill.EditskillViewModel, EmployeeSystemDeliverable
+@masterPage Views/MasterPage.dotmaster
+
+<dot:Content ContentPlaceHolderID="MainContent">
+
+    <form>
+        <div>
+
+            <div>
+                <dot:TextBox HeaderText="Skill name" Text="{value:Skill.name}" />
+            </div>
+
+            <div>
+                <dot:TextBox HeaderText="Skill description" Text="{value:Skill.desc}" />
+            </div>
+
+            <div>
+                <dot:TextBox HeaderText="Skill date" Text="{value:Skill.creation}" />
+            </div>
+
+        </div>
+        <dot:Button Text="Update" Click="{command: UpdateSkill(Skill.idskills)}" IsSubmitButton />
+    </form>
+
+</dot:Content>
+

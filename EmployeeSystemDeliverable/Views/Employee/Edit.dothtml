@@ -1,0 +1,29 @@
+﻿@viewModel EmployeeSystemDeliverable.ViewModels.Employee.EditViewModel, EmployeeSystemDeliverable
+@masterPage Views/MasterPage.dotmaster
+
+<dot:Content ContentPlaceHolderID="MainContent">
+
+    
+    <form>
+        <div>
+            
+                <div>
+                    <dot:TextBox HeaderText="First name" Text="{value:Employee.name}" />
+                </div>
+
+                <div>
+                    <dot:TextBox HeaderText="Last name" Text="{value:Employee.surname}" />
+                </div>
+
+
+                <div>
+                    <dot:TextBox HeaderText="Skills" Text="{value:Employee.skills}" />
+                </div>
+            
+        </div>
+        <dot:Button Text="Update" Click="{command: UpdateEmployee(Employee.idemployee)}" IsSubmitButton/>
+    </form>
+    
+
+</dot:Content>
+

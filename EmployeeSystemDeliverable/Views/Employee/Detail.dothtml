@@ -1,0 +1,29 @@
+﻿@viewModel EmployeeSystemDeliverable.ViewModels.Employee.DetailViewModel, EmployeeSystemDeliverable
+@masterPage Views/MasterPage.dotmaster
+
+<dot:Content ContentPlaceHolderID="MainContent">
+  
+      
+    <div>
+        <div class="input-box">
+            <h1> Details </h1>
+            <span class="input-text">{{value: Employee.name}}</span>
+        </div>
+
+        <div class="input-box">
+            <span class="input-text">{{value: Employee.surname}}</span>
+        </div>
+
+        <div class="input-box">
+            <span class="input-text">{{value: Employee.hired}}</span>
+        </div>
+
+        <div class="input-box">
+            <span class="input-text">{{value: Employee.skills}}</span>
+        </div>
+
+        <dot:Button Text="Delete" Click="{command: DeleteEmployee()}" IsSubmitButton />
+    </div>
+
+</dot:Content>
+
